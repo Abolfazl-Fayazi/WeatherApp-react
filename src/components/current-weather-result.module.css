@@ -1,0 +1,46 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.card {
+  border: 1rem solid #222;
+  width: 70%;
+  padding: 1rem;
+  border-radius: 3rem;
+  background-color: #222;
+}
+.minMaxTemp {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+h1 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+h3 {
+  color: silver;
+  font-family: "Times New Roman", Times, serif;
+}
+h2{
+    font-size: 1.8rem;
+}
+.condition {
+  color: dodgerblue;
+}
+.sectioner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conditionIcon{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
