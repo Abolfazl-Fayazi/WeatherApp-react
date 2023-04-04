@@ -12,6 +12,13 @@
   border-radius: 3rem;
   background-color: #222;
 }
+.refresh {
+  background-color: #222;
+  border: 0;
+  outline: 0;
+  color: dodgerblue;
+  float: right;
+}
 .minMaxTemp {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -24,23 +31,37 @@ h3 {
   color: silver;
   font-family: "Times New Roman", Times, serif;
 }
-h2{
-    font-size: 1.8rem;
+h2 {
+  font-size: 1.8rem;
 }
-.condition {
+.condition__windy {
+  color: rgb(176, 237, 255);
+}
+.condition__cloudy {
+  color: rgb(107, 181, 255);
+}
+.condition__rainy {
   color: dodgerblue;
 }
+.condition__sunny {
+  color: yellow;
+}
+.condition__clear {
+  color: rgb(255, 255, 101);
+}
+.condition__foggy {
+  color: rgb(255, 183, 88);
+}
+
 .sectioner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.conditionIcon{
-    width: 55%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+.conditionIcon {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

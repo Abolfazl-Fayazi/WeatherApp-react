@@ -23,7 +23,10 @@ function App() {
     <div className="App">
       <Header />
       <SearchBox getCurrentForecast={getCurrentForecast} />
-      <CurrentWeatherResult currentForecast={currentForecast} />
+      <CurrentWeatherResult
+        currentForecast={currentForecast}
+        setCurrentForecast={setCurrentForecast}
+      />
     </div>
   );
 }

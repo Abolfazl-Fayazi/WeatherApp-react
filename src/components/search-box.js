@@ -6,6 +6,8 @@ const SearchBox = function (props) {
   //...........................................
   const [input, setInput] = useState();
   const [currentForecast0, setCurrentForecast0] = useState({});
+  const [isMetric, setIsMetric] = useState(false);
+  const [isImperial, setIsImperial] = useState(false);
 
   //...........................................
 
@@ -21,7 +23,7 @@ const SearchBox = function (props) {
     )
       .then((res) => setCurrentForecast0(res.data))
       .catch((err) => console.log(err));
-      setInput('')
+    setInput("");
   };
 
   useEffect(() => {
@@ -29,7 +31,14 @@ const SearchBox = function (props) {
     props.getCurrentForecast(currentForecast0);
   }, [currentForecast0]);
 
+  useEffect(() => {});
+
   //console.log(currentForecast0);
+
+  const metricSystem = () => {
+    console.log("metricSystem");
+  };
+  const imperialSystem = () => {};
 
   //...........................................
 
@@ -37,7 +46,17 @@ const SearchBox = function (props) {
     <div>
       <div className={classes.wrapper}>
         <div className={classes.searchEngin}>
-          <input className={classes.input} value={input} onChange={getInput} />
+          <input
+            className={classes.input}
+            value={input}
+            onChange={getInput}
+            placeholder="Enter your location . . ."
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                getData();
+              }
+            }}
+          />
           <button className={classes.checkButton} onClick={getData}>
             Check!
           </button>
@@ -49,12 +68,16 @@ const SearchBox = function (props) {
       <div className={classes.units}>
         <div></div>
         <div className={classes.unit}>
-          <input className={classes.unit_checkBox} type="checkbox" />
-          Celsius
+          <input
+            className={classes.unit_checkBox}
+            type="checkbox"
+            on={metricSystem}
+          />
+          Metric
         </div>
         <div className={classes.unit}>
           <input className={classes.unit_checkBox} type="checkbox" />
-          Farenheit
+          Imperial
         </div>
       </div>
     </div>
