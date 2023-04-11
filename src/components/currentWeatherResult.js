@@ -1,4 +1,4 @@
-import classes from "./current-weather-result.module.css";
+import classes from "./currentWeatherResult.module.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 
@@ -29,11 +29,14 @@ const CurrentWeatherResult = function (props) {
     Object.entries(props.currentForecast).map((i) =>
       i[0] === "location" ? i[1].region : null
     );
+
   const countryName =
     " " +
     Object.entries(props.currentForecast).map((i) =>
       i[0] === "location" ? i[1].country : null
     );
+
+ 
   const currentTemp = Object.entries(props.currentForecast).map((i) =>
     i[0] !== "location" ? i[1].temp_c : null
   );
@@ -295,7 +298,7 @@ const CurrentWeatherResult = function (props) {
               <path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path>
             </svg>
           </button>
-          <h1>{cityName + regionName + countryName}</h1>
+          <h1>{cityName + regionName + " " + countryName}</h1>
           <div className={classes.sectioner}>
             <div>
               <h3>Current temperature: {currentTemp} °C</h3>

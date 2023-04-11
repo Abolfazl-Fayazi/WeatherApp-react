@@ -1,8 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Header from "./components/header";
-import SearchBox from "./components/search-box";
-import CurrentWeatherResult from "./components/current-weather-result";
+import SearchBox from "./components/searchBox";
+import CurrentWeatherResult from "./components/currentWeatherResult";
 
 function App() {
   //...........................................
